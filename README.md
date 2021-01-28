@@ -28,14 +28,14 @@ For creating a dialog box now you can use the Dialog react component. It accepts
 Here is an example of a simple dialog box with just a close button:
 
 ```js
-          <Dialog id="about" title={this.state.text_about_title} text_close_button={this.state.text_close_button} >
-            <p>{this.state.text_about_content1}
-                <br />{this.state.text_about_content2}</p>
-            <p>{this.state.text_about_content3}</p>
-            <p>{this.state.text_about_content4}</p>
-            <p>{this.state.text_about_content5}</p>
-            <p>{this.state.text_about_content6}</p>
-          </Dialog>
+<Dialog id="about" title={this.state.text_about_title} text_close_button={this.state.text_close_button} >
+  <p>{this.state.text_about_content1}
+    <br />{this.state.text_about_content2}</p>
+  <p>{this.state.text_about_content3}</p>
+  <p>{this.state.text_about_content4}</p>
+  <p>{this.state.text_about_content5}</p>
+  <p>{this.state.text_about_content6}</p>
+</Dialog>
 ```
 
 In the above example, this.state.text_about_title contains the localized version of the "About" string, this.state.text_close_button contains the localized version of the "Close" string, this.state.text_about_contentN contain different translated messages. The result will be a dialog box with a title, its content, and a close button.
@@ -43,15 +43,15 @@ In the above example, this.state.text_about_title contains the localized version
 Here is an example of a more complex dialog box:
 
 ```js
-          <Dialog id="impexp" title={this.state.text_importexport_title}
-                  actions={(<span>
-                    <label>{this.state.text_import}
-                    &nbsp;
-                    <input type="file" onChange={e => this.importNotes(e)} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></label>
-                    <input type="submit" value={this.state.text_back} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" />
-                    <input type="submit" value={this.state.text_export} onClick={event => this.exportNotes()} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></span>)} >
-            <p>{this.state.text_importexport_content}</p>
-					</Dialog>
+<Dialog id="impexp" title={this.state.text_importexport_title}
+  actions={(<span>
+    <label>{this.state.text_import}
+    &nbsp;
+    <input type="file" onChange={e => this.importNotes(e)} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></label>
+    <input type="submit" value={this.state.text_back} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" />
+    <input type="submit" value={this.state.text_export} onClick={event => this.exportNotes()} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></span>)} >
+    <p>{this.state.text_importexport_content}</p>
+</Dialog>
 ```
 
 In this example, this.state.text_importexport_title contains the localized version of the "Import/export" string, the actions property contains some HTML input controls with their callbacks, and finally this.state.text_importexport_content contains a localized message which examplains what the controls are meant for.
