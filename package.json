@@ -1,0 +1,28 @@
+{
+  "name": "@marcoparrone/dialog",
+  "version": "1.0.0",
+  "description": "Dialog material react component.",
+  "main": "src/dialog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoparrone/dialog.git"
+  },
+  "keywords": [
+    "dialog",
+    "react",
+    "material"
+  ],
+  "author": "Marco Parrone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcoparrone/dialog/issues"
+  },
+  "homepage": "https://github.com/marcoparrone/dialog#readme",
+  "dependencies": {
+    "@material/dialog": "^9.0.0",
+    "react": "^17.0.1"
+  }
+}
