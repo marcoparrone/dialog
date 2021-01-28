@@ -18,7 +18,7 @@ Read further for more information.
 
 ## Creating a dialog box
 
-For creating a dialog box now you can use the Dialog react component. It accepts there properties:
+For creating a dialog box now you can use the Dialog react component. It accepts these properties:
 
  * id: a string containing an identifier for the dialog box;
  * title: a string containing the title of the dialog box;
@@ -69,16 +69,16 @@ class NotesList extends React.Component {
 ...
   constructor(props) {
 ...
-		this.notesListRef = React.createRef();
+    this.notesListRef = React.createRef();
 ...
   render() {
 ...
-			<AppWithTopBar refprop={this.notesListRef} lang={this.state.language} appname={this.state.text_appname}
-			  icons={[{label: this.state.text_add_label, icon: 'add', callback: () => this.addNote()},
-								{label: this.state.text_settings_label, icon: 'settings', callback: () => open_dialog(this.notesListRef, 'settings')},
-								{label: this.state.text_importexport_label, icon: 'import_export', callback: () => open_dialog(this.notesListRef, 'impexp')},
-								{label: this.state.text_help_label, icon: 'help', callback: () => open_dialog(this.notesListRef, 'help')},
-								{label: this.state.text_about_label, icon: 'info', callback: () =>  open_dialog(this.notesListRef, 'about')}]} >
+    <AppWithTopBar refprop={this.notesListRef} lang={this.state.language} appname={this.state.text_appname}
+      icons={[{label: this.state.text_add_label, icon: 'add', callback: () => this.addNote()},
+              {label: this.state.text_settings_label, icon: 'settings', callback: () => open_dialog(this.notesListRef, 'settings')},
+              {label: this.state.text_importexport_label, icon: 'import_export', callback: () => open_dialog(this.notesListRef, 'impexp')},
+              {label: this.state.text_help_label, icon: 'help', callback: () => open_dialog(this.notesListRef, 'help')},
+              {label: this.state.text_about_label, icon: 'info', callback: () =>  open_dialog(this.notesListRef, 'about')}]} >
 ...
 ```
 
