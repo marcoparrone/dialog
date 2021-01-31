@@ -28,33 +28,33 @@ For creating a dialog box now you can use the Dialog react component. It accepts
 Here is an example of a simple dialog box with just a close button:
 
 ```js
-<Dialog id="about" title={this.state.text_about_title} text_close_button={this.state.text_close_button} >
-  <p>{this.state.text_about_content1}
-    <br />{this.state.text_about_content2}</p>
-  <p>{this.state.text_about_content3}</p>
-  <p>{this.state.text_about_content4}</p>
-  <p>{this.state.text_about_content5}</p>
-  <p>{this.state.text_about_content6}</p>
+<Dialog id="about" title={this.state.text['text_about_title']} text_close_button={this.state.text['text_close_button']} >
+  <p>{this.state.text['text_about_content1']}
+    <br />{this.state.text['text_about_content2']}</p>
+  <p>{this.state.text['text_about_content3']}</p>
+  <p>{this.state.text['text_about_content4']}</p>
+  <p>{this.state.text['text_about_content5']}</p>
+  <p>{this.state.text['text_about_content6']}</p>
 </Dialog>
 ```
 
-In the above example, this.state.text_about_title contains the localized version of the "About" string, this.state.text_close_button contains the localized version of the "Close" string, this.state.text_about_contentN contain different translated messages. The result will be a dialog box with a title, its content, and a close button.
+In the above example, this.state.text['text_about_title'] contains the localized version of the "About" string, this.state.text['text_close_button'] contains the localized version of the "Close" string, this.state.text['text_about_contentN'] contain different translated messages. The result will be a dialog box with a title, its content, and a close button.
 
 Here is an example of a more complex dialog box:
 
 ```js
-<Dialog id="impexp" title={this.state.text_importexport_title}
+<Dialog id="impexp" title={this.state.text['text_importexport_title']}
   actions={(<span>
-    <label>{this.state.text_import}
+    <label>{this.state.text['text_import']}
     &nbsp;
     <input type="file" onChange={e => this.importNotes(e)} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></label>
-    <input type="submit" value={this.state.text_back} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" />
-    <input type="submit" value={this.state.text_export} onClick={event => this.exportNotes()} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></span>)} >
-    <p>{this.state.text_importexport_content}</p>
+    <input type="submit" value={this.state.text['text_back']} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" />
+    <input type="submit" value={this.state.text['text_export']} onClick={event => this.exportNotes()} className="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes" /></span>)} >
+    <p>{this.state.text['text_importexport_content']}</p>
 </Dialog>
 ```
 
-In this example, this.state.text_importexport_title contains the localized version of the "Import/export" string, the actions property contains some HTML input controls with their callbacks, and finally this.state.text_importexport_content contains a localized message which examplains what the controls are meant for.
+In this example, this.state.text['text_importexport_title'] contains the localized version of the "Import/export" string, the actions property contains some HTML input controls with their callbacks, and finally this.state.text['text_importexport_content'] contains a localized message which examplains what the controls are meant for.
 
 ## Showing a dialog box
 
@@ -73,12 +73,12 @@ class NotesList extends React.Component {
 ...
   render() {
 ...
-    <AppWithTopBar refprop={this.notesListRef} lang={this.state.language} appname={this.state.text_appname}
-      icons={[{label: this.state.text_add_label, icon: 'add', callback: () => this.addNote()},
-              {label: this.state.text_settings_label, icon: 'settings', callback: () => open_dialog(this.notesListRef, 'settings')},
-              {label: this.state.text_importexport_label, icon: 'import_export', callback: () => open_dialog(this.notesListRef, 'impexp')},
-              {label: this.state.text_help_label, icon: 'help', callback: () => open_dialog(this.notesListRef, 'help')},
-              {label: this.state.text_about_label, icon: 'info', callback: () =>  open_dialog(this.notesListRef, 'about')}]} >
+    <AppWithTopBar refprop={this.notesListRef} lang={this.state.language} appname={this.state.text['text_appname']}
+      icons={[{label: this.state.text['text_add_label'], icon: 'add', callback: () => this.addNote()},
+              {label: this.state.text['text_settings_label'], icon: 'settings', callback: () => open_dialog(this.notesListRef, 'settings')},
+              {label: this.state.text['text_importexport_label'], icon: 'import_export', callback: () => open_dialog(this.notesListRef, 'impexp')},
+              {label: this.state.text['text_help_label'], icon: 'help', callback: () => open_dialog(this.notesListRef, 'help')},
+              {label: this.state.text['text_about_label'], icon: 'info', callback: () =>  open_dialog(this.notesListRef, 'about')}]} >
 ...
 ```
 
