@@ -23,7 +23,7 @@ class Dialog extends React.Component {
       'className': 'mdc-dialog', 'role': 'alertdialog', 'aria-modal': 'true', 'aria-labelledby': this.props.id + '-dialog-title',
       'aria-describedby': this.props.id + '-dialog-content', 'id': this.props.id + '-dialog'
     },
-      [React.createElement('div', { 'className': 'mdc-dialog__container' },
+      [React.createElement('div', { 'className': 'mdc-dialog__container', 'key': this.props.id + '-dialog-container' },
         React.createElement('div', { 'className': 'mdc-dialog__surface', 'key': this.props.id + '-dialog-surface' },
           [React.createElement('h2', { 'className': 'mdc-dialog__title', 'id': this.props.id + '-dialog-title', 'key': this.props.id + '-dialog-title' }, this.props.title),
           React.createElement('div', { 'className': 'mdc-dialog__content', 'id': this.props.id + '-dialog-content', 'key': this.props.id + '-dialog-content' }, this.props.children),
