@@ -1,6 +1,6 @@
 {
   "name": "@marcoparrone/dialog",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Dialog material react component.",
   "main": "src/dialog.js",
   "scripts": {
